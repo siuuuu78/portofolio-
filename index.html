@@ -50,6 +50,10 @@
           <div class="hero-left">
             <h3 class="pre-title">My name is</h3>
             <h1 class="hero-name">Rayhan <span>Rambe</span></h1>
+             <div class="typed">
+              <span class="text first-text">I'm a</span>
+              <span class="text sec-text">Student</span>
+            </div>
             <p>
               Just some guy who like to build a simple web. Love simple things
               and live a simple life.
@@ -368,5 +372,23 @@
     <!-- End Footer -->
 
     <script src="js/main.js"></script>
+        <script>
+      const text = document.querySelector(".sec-text");
+
+      const textLoad = () => {
+        setTimeout(() => {
+          text.textContent = "Student";
+        }, 0);
+        setTimeout(() => {
+          text.textContent = "Web Developer";
+        }, 4000);
+        setTimeout(() => {
+          text.textContent = "UI UX Designer";
+        }, 8000); //1s = 1000 milliseconds
+      };
+
+      textLoad();
+      setInterval(textLoad, 12000);
+    </script>
   </body>
 </html>
