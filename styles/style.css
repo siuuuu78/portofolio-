@@ -201,6 +201,42 @@ nav ul li a {
   justify-content: center;
 }
 
+/* Ketik */
+.typed {
+  width: 400px;
+  overflow: hidden;
+}
+.typed .text {
+  position: relative;
+  color: var(--primaryIconColor);
+  font-size: 30px;
+  font-weight: 600;
+}
+.typed .text.first-text {
+  color: var(--primaryTextColor);
+}
+.text.sec-text:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  background-color: var(--primaryBackgroundColor);
+  border-left: 2px solid var(--primaryIconColor);
+  animation: animate 4s steps(14) infinite;
+}
+@keyframes animate {
+  40%,
+  60% {
+    left: calc(100% + 4px);
+  }
+  100% {
+    left: 0%;
+  }
+}
+
 /* Services Section */
 #services {
   background-color: var(--secondaryBackgroundColor);
